@@ -31,7 +31,35 @@
 - [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.swift))
 - [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.swift))
 ### **구현**
+- [1316 그룹 단어 체커](https://www.acmicpc.net/problem/1316) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_1316.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_1316.py))
+- [14891 톱니바퀴](https://www.acmicpc.net/problem/14891) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_14891.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_14891.py))
+- [15686 치킨 배달](https://www.acmicpc.net/problem/15686) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_15686.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_15686.py))
+### **브루트포스**
+- [1018 체스판 다시 칠하기](https://www.acmicpc.net/problem/1018) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.py))
 ### **그리디**
+- [1439 뒤집기](https://www.acmicpc.net/problem/1439) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Greedy/BOJ_1439.py))
+### **수학**
 ### **조합론**
+- [1010 다리 놓기](https://www.acmicpc.net/problem/1010) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.py))
+### **기하학**
+- [1064 평행사변형](https://www.acmicpc.net/problem/1064) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Geometry/BOJ_1064.py))
 ### **다이나믹 프로그래밍**
+---
 ## **프로그래머스**
+### **Level 1**
+- [체육복](https://programmers.co.kr/learn/courses/30/lessons/42862) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/%EC%B2%B4%EC%9C%A1%EB%B3%B5.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/%EC%B2%B4%EC%9C%A1%EB%B3%B5.py))
+- [K번째 수](https://programmers.co.kr/learn/courses/30/lessons/42748) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/K%EB%B2%88%EC%A7%B8%EC%88%98.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/K%EB%B2%88%EC%A7%B8%EC%88%98.py))
+- [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv1/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.swift))
+### **Level 2**
+- [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.swift))
+- [큰 수 만들기](https://programmers.co.kr/learn/courses/30/lessons/42883) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%ED%81%B0%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0.py))
+- [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EA%B0%80%EC%9E%A5%ED%81%B0%EC%88%98.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EA%B0%80%EC%9E%A5%ED%81%B0%EC%88%98.py))
+- [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/H-Index.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/H-Index.py))
+- [타겟 넘버](https://programmers.co.kr/learn/courses/30/lessons/43165) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%ED%83%80%EA%B2%9F%EB%84%98%EB%B2%84.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%ED%83%80%EA%B2%9F%EB%84%98%EB%B2%84.py))
+- [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%B9%B4%ED%8E%AB.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%B9%B4%ED%8E%AB.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/lv2/%EC%B9%B4%ED%8E%AB.swift))
+### **Level 3**
+### **Level 4**
+### **Level 5**
+### **카카오**
+- [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%95%95%EC%B6%95.py))
+- [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%95%95%EC%B6%95.py))
