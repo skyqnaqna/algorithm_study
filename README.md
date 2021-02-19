@@ -1,7 +1,5 @@
 # **알고리즘 공부 && 코드 저장**
----
 ## **백준**
----
 ### **DFS/BFS**
 - [10026 적록색약](https://www.acmicpc.net/problem/10026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_10026.cpp))
 - [1012 유기농 배추](https://www.acmicpc.net/problem/1012) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.py))
@@ -30,9 +28,8 @@
 - [2910 빈도 정렬](https://www.acmicpc.net/problem/2910) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_2910.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_2910.py))
 - [5648 역원소 정렬](https://www.acmicpc.net/problem/5648) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_5648.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_5648.py))
 ### **두 포인터**
-- [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2003.swift))
-- [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_14921.swift))
-- []
+- [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.swift))
+- [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.swift))
 ### **구현**
 ### **그리디**
 ### **조합론**
