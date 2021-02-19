@@ -1,58 +1,41 @@
-/*----------------------
-|백준 14620 꽃길
-|21.01.26
-----------------------*/
-
-#include <iostream>
+#include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-int main()
+int solution(int n, vector<int> lost, vector<int> reserve) 
 {
-    int arr[5][5] = {{0,0,0,0,0},
-                     {1,1,1,1,1},
-                     {2,2,2,2,2},
-                     {3,3,3,3,3},
-                     {4,4,4,4,4}};
-    
-    fill(&arr[0][0], &arr[4][5], 7);
+    int answer = n;
+    vector <int> students (n+1, 1);
 
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < lost.size(); ++i)
     {
-        for (int j = 0; j < 5; ++j)
-        {
-            printf("%d ", arr[i][j]);
-        }
-        printf("\n");
+        students[lost[i]]--;
+    }
+    for (int i = 0; i < reserve.size(); ++i)
+    {
+        students[reserve[i]]++;
     }
 
-    printf("==============\n");
-
-    fill(arr[0], &arr[1][5], 3);
-
-    for (int i = 0; i < 5; ++i)
+    // 빌릴 수 있으면 빌리기
+    for (int i = 0; i < lost.size(); ++i)
     {
-        for (int j = 0; j < 5; ++j)
+        int k = lost[i];
+        if (students[k] == 0)
         {
-            printf("%d ", arr[i][j]);
+            if (k - 1 > 0 && students[k - 1] > 1) // 앞사람한테 빌리기
+            {
+                students[k]++;
+                students[k - 1]--;
+            }
+            else if (k + 1 <= n && students[k + 1] > 1) // 뒷사람한테 빌리기
+            {
+                students[k]++;
+                students[k + 1]--;
+            }
+            else answer--;
         }
-        printf("\n");
     }
 
-    printf("==============\n");
-
-    fill(arr[0], arr[0] + 15, 5);
-
-    for (int i = 0; i < 5; ++i)
-    {
-        for (int j = 0; j < 5; ++j)
-        {
-            printf("%d ", arr[i][j]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+    return answer;
 }
