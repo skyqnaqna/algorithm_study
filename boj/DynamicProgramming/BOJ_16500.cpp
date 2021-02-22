@@ -19,7 +19,7 @@ typedef std::pair<ll, ll> pll;
 
 using namespace std;
 
-bool d[101] = {false};
+int d[101] = { 0 };
 string s;
 vector <string> words;
 int n;
@@ -38,7 +38,7 @@ int main()
         words.push_back(a);
     }
 
-    d[s.length()] = true;
+    d[s.length()] = 1;
 
     for (int i = s.length() - 1; i >= 0; --i)
     {
