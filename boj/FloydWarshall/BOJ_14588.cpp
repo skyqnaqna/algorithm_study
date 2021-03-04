@@ -1,3 +1,5 @@
+// 백준 14588 Line Friends (Small)
+// 21.02.27
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -5,82 +7,66 @@
 #include <string>
 #include <cmath>
 #include <set>
-#define INF 2147000000
+#include <stack>
+
+#define INF 1e9
 #define endl "\n"
 
 typedef long long ll;
 typedef double dd;
+typedef std::pair<int, int> pii;
+typedef std::pair<ll, ll> pll;
 
 using namespace std;
 
-int dist[10001];
-bool check[10001];
-vector < vector <pair <int, int> > > graph;
+int dist[301][301];
+pii edges[301];
 
 int main()
 {
-    int n, m; scanf("%d %d", &n, &m);
-    fill(dist, dist + 10001, -1);
-    fill(check, check + 10001, false);
-
-    graph.resize(n + 1);
-
-    for (int i = 0; i < m; ++i)
+    int n; scanf("%d", &n);
+    for (int i = 1; i <= n; ++i)
     {
-        int u, v, w;
-        scanf("%d %d %d", &u, &v, &w);
-        graph[u].push_back({v, w});
-        graph[v].push_back({u, w});
+        scanf("%d %d", &edges[i].first, &edges[i].second);
     }
-
-    dist[1] = 0;
-    queue <int> q;
-    q.push(1);
-    while (!q.empty())
-    {
-        int now = q.front();
-        q.pop();
-        check[now] = true;
-
-        for(int i = 0; i < graph[now].size(); ++i)
-        {
-            int mid = graph[now][i].first;
-            int cost = graph[now][i].second + dist[now];
-
-            if (check[mid]) continue;
-            check[mid] = true;
-
-            for (int j = 0; j < graph[mid].size(); ++j)
-            {
-                int next = graph[mid][j].first;
-                int cost2 = cost + graph[mid][j].second;
-                if (next == now) continue;
-                if (check[next]) continue;
-                check[next] = true;
-
-                int real = pow(cost2, 2);
-
-                if (dist[next] == -1)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                else if (dist[next] > real)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                check[next] = false;
-            }
-            check[mid] = false;
-        }
-        check[now] = false;
-
-    }
+    fill(&dist[0][0], &dist[300][301], INF);
 
     for (int i = 1; i <= n; ++i)
     {
-        printf("%d ", dist[i]);
+        int l1 = edges[i].first;
+        int r1 = edges[i].second;
+        for (int j = 1; j <= n; ++j)
+        {
+            if (i == j) continue;
+            int l2 = edges[j].first;
+            int r2 = edges[j].second;
+
+            // 1번이 왼쪽에 있을 때 기준 / 1번이 오른쪽에 있을 때 기준
+            if ((l1 <= l2 && r1 >= l2) || (r1 >= r2 && l1 <= r2))
+            {
+                dist[i][j] = dist[j][i] = 1;
+            }
+        }
+    }
+
+    for (int k = 1; k <= n; ++k)
+    {
+        for (int i = 1; i <= n; ++i)
+        {
+            for (int j = 1; j <= n; ++j)
+            {
+                if (i == j || i == k || j == k) continue;
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
+            }
+        }
+    }
+
+    int q; scanf("%d", &q);
+    for (int i = 0; i < q; ++i)
+    {
+        int a, b; scanf("%d %d", &a, &b);
+        if (dist[a][b] < INF) printf("%d\n", dist[a][b]);
+        else printf("%d\n", -1);
     }
 
     return 0;

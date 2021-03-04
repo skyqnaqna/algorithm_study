@@ -1,3 +1,5 @@
+// 백준 1854 K번째 최단경로 찾기
+// 21.03.03
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -5,82 +7,66 @@
 #include <string>
 #include <cmath>
 #include <set>
-#define INF 2147000000
+#include <stack>
+
+#define INF 1e9
 #define endl "\n"
 
 typedef long long ll;
 typedef double dd;
+typedef std::pair<int, int> pii;
+typedef std::pair<ll, ll> pll;
 
 using namespace std;
 
-int dist[10001];
-bool check[10001];
-vector < vector <pair <int, int> > > graph;
+int n, m, k;
+vector < priority_queue<int> > dist (1001);
+vector < vector <pii> > edges;
 
 int main()
 {
-    int n, m; scanf("%d %d", &n, &m);
-    fill(dist, dist + 10001, -1);
-    fill(check, check + 10001, false);
-
-    graph.resize(n + 1);
-
+    scanf("%d %d %d", &n, &m, &k);
+    edges.resize(n + 1);
     for (int i = 0; i < m; ++i)
     {
-        int u, v, w;
-        scanf("%d %d %d", &u, &v, &w);
-        graph[u].push_back({v, w});
-        graph[v].push_back({u, w});
+        int u, v, w; scanf("%d %d %d", &u, &v, &w);
+        edges[u].push_back({v, w});
     }
 
-    dist[1] = 0;
-    queue <int> q;
-    q.push(1);
+    priority_queue<pii, vector<pii>, greater<> > q;
+    q.push({0, 1}); // 비용, 정점
+    dist[1].push(0);
     while (!q.empty())
     {
-        int now = q.front();
+        int now = q.top().second;
+        int cost = q.top().first;
         q.pop();
-        check[now] = true;
 
-        for(int i = 0; i < graph[now].size(); ++i)
+        for (int i = 0; i < edges[now].size(); ++i)
         {
-            int mid = graph[now][i].first;
-            int cost = graph[now][i].second + dist[now];
+            int next = edges[now][i].first;
+            int nextCost = edges[now][i].second;
 
-            if (check[mid]) continue;
-            check[mid] = true;
-
-            for (int j = 0; j < graph[mid].size(); ++j)
+            if (dist[next].size() < k)
             {
-                int next = graph[mid][j].first;
-                int cost2 = cost + graph[mid][j].second;
-                if (next == now) continue;
-                if (check[next]) continue;
-                check[next] = true;
-
-                int real = pow(cost2, 2);
-
-                if (dist[next] == -1)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                else if (dist[next] > real)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                check[next] = false;
+                dist[next].push(cost + nextCost);
+                q.push({cost + nextCost, next});
             }
-            check[mid] = false;
+            else if (dist[next].top() > cost + nextCost)
+            {
+                dist[next].pop();
+                dist[next].push(cost + nextCost);
+                // K 번째 최단 경로가 새로 갱신되면 다른 노드들의 최단 경로에도 영향을 주기 때문에
+                // 큐에 넣고 최신화할 것
+                q.push({cost + nextCost, next});
+            }
         }
-        check[now] = false;
-
     }
 
     for (int i = 1; i <= n; ++i)
     {
-        printf("%d ", dist[i]);
+        if (dist[i].size() < k) printf("%d\n", -1);
+        else printf("%d\n", dist[i].top());
     }
 
     return 0;

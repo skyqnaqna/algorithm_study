@@ -25,29 +25,28 @@ int dist[100001];
 int main()
 {
     scanf("%d %d", &n, &k);
-    int maximum = max(n, k);
-    fill(dist, dist + 100001, INF);
+    fill(dist, dist + 100001, -1);
 
     dist[n] = 0;
 
     queue <int> q;
     q.push(n);
-    while (!q.empty())
+    while (dist[k] == -1)
     {
         int now = q.front();
         q.pop();
 
-        if (now - 1 >= 0 && dist[now] + 1 < dist[now - 1])
+        if (now - 1 >= 0 && dist[now - 1] == -1)
         {
             dist[now - 1] = dist[now] + 1;
             q.push(now - 1);
         }
-        if (now + 1 < 100001 && dist[now] + 1 < dist[now + 1])
+        if (now + 1 < 100001 && dist[now + 1] == -1)
         {
             dist[now + 1] = dist[now] + 1;
             q.push(now + 1);
         }
-        if (now * 2 < 100001 && dist[now] + 1 < dist[now * 2])
+        if (now * 2 < 100001 && dist[now * 2] == -1)
         {
             dist[now * 2] = dist[now] + 1;
             q.push(now * 2);

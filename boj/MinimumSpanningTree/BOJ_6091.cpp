@@ -1,3 +1,5 @@
+// 백준 6091 핑크 플로이드
+// 21.03.03
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -5,82 +7,90 @@
 #include <string>
 #include <cmath>
 #include <set>
-#define INF 2147000000
+#include <stack>
+
+#define INF 1e9
 #define endl "\n"
 
 typedef long long ll;
 typedef double dd;
+typedef std::pair<int, int> pii;
+typedef std::pair<ll, ll> pll;
 
 using namespace std;
 
-int dist[10001];
-bool check[10001];
-vector < vector <pair <int, int> > > graph;
+vector <pair <int , pii> > edges;
+int parent[1025];
+int n;
+
+int getParent(int a)
+{
+    if (parent[a] == a) return a;
+    else return parent[a] = getParent(parent[a]);
+}
+
+void unionNodes(int a, int b)
+{
+    int x = getParent(a);
+    int y = getParent(b);
+
+    if (x < y) parent[y] = x;
+    else parent[x] = y;
+}
+
 
 int main()
 {
-    int n, m; scanf("%d %d", &n, &m);
-    fill(dist, dist + 10001, -1);
-    fill(check, check + 10001, false);
+    scanf("%d", &n);
 
-    graph.resize(n + 1);
-
-    for (int i = 0; i < m; ++i)
+    for (int i = 1; i <= n; ++i)
     {
-        int u, v, w;
-        scanf("%d %d %d", &u, &v, &w);
-        graph[u].push_back({v, w});
-        graph[v].push_back({u, w});
+        for (int j = i + 1; j <= n; ++j)
+        {
+            int x; scanf("%d", &x);
+            edges.push_back({x, {i, j}});
+        }
+        parent[i] = i;
     }
 
-    dist[1] = 0;
-    queue <int> q;
-    q.push(1);
+    sort(edges.begin(), edges.end(), greater<>());
+
+    vector < vector <int> > ans (n + 1);
+    queue <pii> q;
+
+    // 선택한 간선의 수 n-1 개 구하기
+    while (q.size() < n - 1)
+    {
+        int u, v;
+        u = edges.back().second.first;
+        v = edges.back().second.second;
+        edges.pop_back();
+
+        if (getParent(u) != getParent(v))
+        {
+            unionNodes(u, v);
+            q.push({u, v});
+        }
+    }
+
     while (!q.empty())
     {
-        int now = q.front();
+        int a = q.front().first;
+        int b = q.front().second;
         q.pop();
-        check[now] = true;
-
-        for(int i = 0; i < graph[now].size(); ++i)
-        {
-            int mid = graph[now][i].first;
-            int cost = graph[now][i].second + dist[now];
-
-            if (check[mid]) continue;
-            check[mid] = true;
-
-            for (int j = 0; j < graph[mid].size(); ++j)
-            {
-                int next = graph[mid][j].first;
-                int cost2 = cost + graph[mid][j].second;
-                if (next == now) continue;
-                if (check[next]) continue;
-                check[next] = true;
-
-                int real = pow(cost2, 2);
-
-                if (dist[next] == -1)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                else if (dist[next] > real)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                check[next] = false;
-            }
-            check[mid] = false;
-        }
-        check[now] = false;
-
+        ans[a].push_back(b);
+        ans[b].push_back(a);
     }
 
     for (int i = 1; i <= n; ++i)
     {
-        printf("%d ", dist[i]);
+        printf("%d ", ans[i].size());
+        sort(ans[i].begin(), ans[i].end());
+        for (int j = 0; j < ans[i].size(); ++j)
+        {
+            printf("%d ", ans[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;

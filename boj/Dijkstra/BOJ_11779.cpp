@@ -1,3 +1,5 @@
+// 백준 11779 최소비용 구하기 2
+// 21.02.27
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -5,83 +7,84 @@
 #include <string>
 #include <cmath>
 #include <set>
-#define INF 2147000000
+#include <stack>
+
+#define INF 1e9
 #define endl "\n"
 
 typedef long long ll;
 typedef double dd;
+typedef std::pair<int, int> pii;
+typedef std::pair<ll, ll> pll;
 
 using namespace std;
 
-int dist[10001];
-bool check[10001];
-vector < vector <pair <int, int> > > graph;
+int dist[1001];
+int pre[1001];
+int n, m, s, e;
+vector < vector <pii> > graph;
 
 int main()
 {
-    int n, m; scanf("%d %d", &n, &m);
-    fill(dist, dist + 10001, -1);
-    fill(check, check + 10001, false);
-
+    scanf("%d\n%d", &n, &m);
     graph.resize(n + 1);
 
     for (int i = 0; i < m; ++i)
     {
-        int u, v, w;
-        scanf("%d %d %d", &u, &v, &w);
+        int u, v, w; scanf("%d %d %d", &u, &v, &w);
         graph[u].push_back({v, w});
-        graph[v].push_back({u, w});
     }
+    scanf("%d %d", &s, &e);
 
-    dist[1] = 0;
-    queue <int> q;
-    q.push(1);
+    fill(dist, dist + 1001, INF);
+
+    // 비용, 도시
+    priority_queue <pii, vector<pii>, greater<> > q;
+    dist[s] = 0;
+    pre[s] = s;
+    q.push({0, s});
+
     while (!q.empty())
     {
-        int now = q.front();
+        int now = q.top().second;
+        int cost = q.top().first;
         q.pop();
-        check[now] = true;
 
-        for(int i = 0; i < graph[now].size(); ++i)
+        if (dist[now] < cost) continue;
+
+        for (int i = 0; i < graph[now].size(); ++i)
         {
-            int mid = graph[now][i].first;
-            int cost = graph[now][i].second + dist[now];
+            int next = graph[now][i].first;
+            int nextCost = graph[now][i].second;
 
-            if (check[mid]) continue;
-            check[mid] = true;
-
-            for (int j = 0; j < graph[mid].size(); ++j)
+            // 같을 때도 넣어줘야 이전 도시정보를 바꿀 수 있음
+            if (cost + nextCost <= dist[next])
             {
-                int next = graph[mid][j].first;
-                int cost2 = cost + graph[mid][j].second;
-                if (next == now) continue;
-                if (check[next]) continue;
-                check[next] = true;
-
-                int real = pow(cost2, 2);
-
-                if (dist[next] == -1)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                else if (dist[next] > real)
-                {
-                    q.push(next);
-                    dist[next] = real;
-                }
-                check[next] = false;
+                dist[next] = cost + nextCost;
+                q.push({cost+nextCost, next});
+                pre[next] = now;
             }
-            check[mid] = false;
         }
-        check[now] = false;
-
     }
 
-    for (int i = 1; i <= n; ++i)
+    printf("%d\n", dist[e]);
+    int idx = e;
+    stack <int> st;
+    st.push(e);
+    while (1)
     {
-        printf("%d ", dist[i]);
+        st.push(pre[idx]);
+        if (pre[idx] == s) break;
+        idx = pre[idx];
     }
+
+    printf("%d\n", st.size());
+    while (!st.empty())
+    {
+        printf("%d ", st.top());
+        st.pop();
+    }
+    printf("\n");
 
     return 0;
 }
