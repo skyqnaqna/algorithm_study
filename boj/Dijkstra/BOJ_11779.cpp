@@ -1,5 +1,5 @@
 // 백준 11779 최소비용 구하기 2
-// 21.02.27
+// 21.03.26
 #include <iostream>
 #include <algorithm>
 #include <queue>
@@ -57,8 +57,8 @@ int main()
             int next = graph[now][i].first;
             int nextCost = graph[now][i].second;
 
-            // 같을 때도 넣어줘야 이전 도시정보를 바꿀 수 있음
-            if (cost + nextCost <= dist[next])
+            // 같을 때는 무시 (모든 경로가 0일 때 생각)
+            if (cost + nextCost < dist[next])
             {
                 dist[next] = cost + nextCost;
                 q.push({cost+nextCost, next});

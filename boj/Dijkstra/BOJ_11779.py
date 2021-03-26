@@ -1,5 +1,5 @@
-# 백준 11779 최소비용 구하기 2
-# 21.03.03
+# 백준 최소비용 구하기 2
+# 21.03.26
 
 import sys
 import heapq
@@ -33,7 +33,7 @@ while q:
 
     for i in range(len(edges[now])):
         nx, nxCost = edges[now][i]
-        if cost + nxCost <= dist[nx]:
+        if cost + nxCost < dist[nx]:
             dist[nx] = cost + nxCost
             pre[nx] = now
             heapq.heappush(q, (cost + nxCost, nx))
