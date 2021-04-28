@@ -21,6 +21,8 @@
 - [1789 수들의 합](https://www.acmicpc.net/problem/1789) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1789.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1789.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1789.swift))
 - [1822 차집합](https://www.acmicpc.net/problem/1822) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1822.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1822.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1822.swift))
 - [2110 공유기 설치](https://www.acmicpc.net/problem/2110) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.swift))
+- [1939 중량제한](https://www.acmicpc.net/problem/1939) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1939.swift))
+
 ### **정렬**
 - [1026 보물](https://www.acmicpc.net/problem/1026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1026.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1026.py))
 - [1431 시리얼 번호](https://www.acmicpc.net/problem/1431) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1431.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1431.py))
@@ -41,6 +43,7 @@
 - [2504 괄호의 값](https://www.acmicpc.net/problem/2504) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_2504.swift))
 - [2002 추월](https://www.acmicpc.net/problem/2002) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_2002.swift))
 - [2590 색종이](https://www.acmicpc.net/problem/2590) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_2590.py))
+- [3190 뱀](https://www.acmicpc.net/problem/3190) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_3190.swift))
 
 ### **브루트포스**
 - [1018 체스판 다시 칠하기](https://www.acmicpc.net/problem/1018) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.py))
