@@ -45,14 +45,14 @@ func solution(_ n:Int, _ build_frame:[[Int]]) -> [[Int]] {
     if type == 0 {
       verticality[y][x] = false
       if y+1 <= n && verticality[y+1][x] && !checkRule(x, y+1, 0) { deleting = false }
-      if y+1 <= n && horizon[y+1][x] && !checkRule(x, y+1, 1) { deleting = false }
-      if x-1 >= 0 && y+1 <= n && horizon[y+1][x-1] && !checkRule(x-1, y+1, 1) { deleting = false }
+      else if y+1 <= n && horizon[y+1][x] && !checkRule(x, y+1, 1) { deleting = false }
+      else if x-1 >= 0 && y+1 <= n && horizon[y+1][x-1] && !checkRule(x-1, y+1, 1) { deleting = false }
     } else {
       horizon[y][x] = false
       if x-1 >= 0 && horizon[y][x-1] && !checkRule(x-1, y, 1) { deleting = false }
-      if x+1 <= n && horizon[y][x+1] && !checkRule(x+1, y, 1) {deleting = false }
-      if verticality[y][x] && !checkRule(x, y, 0) { deleting = false }
-      if x+1 <= n && verticality[y][x+1] && !checkRule(x+1 , y, 0) { deleting = false }
+      else if x+1 <= n && horizon[y][x+1] && !checkRule(x+1, y, 1) {deleting = false }
+      else if verticality[y][x] && !checkRule(x, y, 0) { deleting = false }
+      else if x+1 <= n && verticality[y][x+1] && !checkRule(x+1 , y, 0) { deleting = false }
     }
 
     if !deleting {
