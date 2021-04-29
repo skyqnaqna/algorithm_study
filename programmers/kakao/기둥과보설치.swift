@@ -7,7 +7,6 @@ func solution(_ n:Int, _ build_frame:[[Int]]) -> [[Int]] {
   var result = [[Int]]()
   var verticality = [[Bool]](repeating: [Bool](repeating: false, count: n + 1), count: n + 1)
   var horizon = [[Bool]](repeating: [Bool](repeating: false, count: n + 1), count: n + 1)
-  let d = [(0, -1), (0, 1), (-1, 0), (1, 0), (0, 0)]
 
   // x:= col, y:= row
   func checkRule(_ x: Int, _ y: Int, _ type: Int) -> Bool {
@@ -41,24 +40,19 @@ func solution(_ n:Int, _ build_frame:[[Int]]) -> [[Int]] {
   }
 
   func delete(_ x: Int, _ y: Int, _ type: Int) {
-    if type == 0 {
-      verticality[y][x] = false
-    } else {
-      horizon[y][x] = false
-    }
-
     var deleting = true
 
-    for i in 0...n {
-      for j in 0...n {
-        if (verticality[i][j] && !checkRule(j, i, 0)) || (horizon[i][j] && !checkRule(j, i, 1)) {
-          deleting = false
-          break
-        }
-      }
-      if !deleting {
-        break
-      }
+    if type == 0 {
+      verticality[y][x] = false
+      if y+1 <= n && verticality[y+1][x] && !checkRule(x, y+1, 0) { deleting = false }
+      if y+1 <= n && horizon[y+1][x] && !checkRule(x, y+1, 1) { deleting = false }
+      if x-1 >= 0 && y+1 <= n && horizon[y+1][x-1] && !checkRule(x-1, y+1, 1) { deleting = false }
+    } else {
+      horizon[y][x] = false
+      if x-1 >= 0 && horizon[y][x-1] && !checkRule(x-1, y, 1) { deleting = false }
+      if x+1 <= n && horizon[y][x+1] && !checkRule(x+1, y, 1) {deleting = false }
+      if verticality[y][x] && !checkRule(x, y, 0) { deleting = false }
+      if x+1 <= n && verticality[y][x+1] && !checkRule(x+1 , y, 0) { deleting = false }
     }
 
     if !deleting {
