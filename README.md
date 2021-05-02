@@ -1,5 +1,8 @@
 # **알고리즘 공부 && 코드 저장**
 ## **백준**
+### **Stack**
+- [2493 탑](https://www.acmicpc.net/problem/2493) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
+
 ### **DFS/BFS**
 - [10026 적록색약](https://www.acmicpc.net/problem/10026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_10026.cpp))
 - [1012 유기농 배추](https://www.acmicpc.net/problem/1012) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.py))
