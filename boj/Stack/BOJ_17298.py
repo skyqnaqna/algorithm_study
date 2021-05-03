@@ -26,8 +26,4 @@ for i in range(n):
 for i in stack:
     A[i] = -1
 
-answer = ""
-for i in A:
-    answer += str(i) + " "
-
-print(answer)
+print(' '.join(str(answer) for answer in A))

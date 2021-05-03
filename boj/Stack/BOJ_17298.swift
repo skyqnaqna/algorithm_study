@@ -20,9 +20,4 @@ for i in stack {
   A[i] = -1
 }
 
-var answer = ""
-for i in A{
-  answer += "\(i) "
-}
-
-print(answer)
+print(A.map { String($0) }.joined(separator: " "))

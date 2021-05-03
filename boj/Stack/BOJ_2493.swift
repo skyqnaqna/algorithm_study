@@ -20,6 +20,4 @@ for i in stride(from: n - 1, through: 0, by: -1) {
   }
 }
 
-for res in result {
-  print(res, terminator: " ")
-}
+print(result.map { String($0) }.joined(separator: " "))

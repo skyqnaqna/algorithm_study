@@ -22,5 +22,4 @@ for i in range(n-1, -1, -1):
         stack.pop()
     stack.append(i)
 
-for res in result:
-    print(res, end=" ")
+print(' '.join(str(res) for res in result))
