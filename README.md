@@ -40,6 +40,9 @@
 ### **두 포인터**
 - [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.swift))
 - [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.swift))
+
+### **슬라이딩 윈도우**
+- [11003 최솟값 찾기](https://www.acmicpc.net/problem/11003) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/SlidingWindow/BOJ_11003.py))
 ### **구현**
 - [1316 그룹 단어 체커](https://www.acmicpc.net/problem/1316) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_1316.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_1316.py))
 - [14891 톱니바퀴](https://www.acmicpc.net/problem/14891) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_14891.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_14891.py))
