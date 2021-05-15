@@ -50,6 +50,7 @@ for i in 0..<n {
   graph[i] = readLine()!.split(separator: " ").map { Int(String($0))! }
 }
 
+// 인구 차이 확인
 func checkGap(_ r1: Int, _ c1: Int, _ r2: Int, _ c2: Int) -> Bool {
   let gap = abs(graph[r1][c1] - graph[r2][c2])
   if gap >= l && gap <= r {
@@ -59,6 +60,7 @@ func checkGap(_ r1: Int, _ c1: Int, _ r2: Int, _ c2: Int) -> Bool {
   }
 }
 
+// 주변에 국경선을 공유할 나라가 있는지 확인
 func checkOpen(_ r: Int, _ c: Int) -> Bool {
   for (dx, dy) in direction {
     let row = r + dy
@@ -108,17 +110,17 @@ func bfs(_ r: Int, _ c: Int, _ visited: inout [[Bool]]) {
 var answer = 0
 
 while true {
-  var flag = false
+  var migrated = false
   var visited = [[Bool]](repeating: [Bool](repeating: false, count: n), count: n)
   for i in 0..<n {
     for j in 0..<n {
       if !visited[i][j] && checkOpen(i, j) {
         bfs(i, j, &visited)
-        flag = true
+        migrated = true
       }
     }
   }
-  if flag { answer += 1 }
+  if migrated { answer += 1 }
   else { break }
 }
 
