@@ -42,6 +42,8 @@
 - [16496 큰 수 만들기](https://www.acmicpc.net/problem/16496) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_16496.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_16496.swift))
 - [1422 숫자의 신](https://www.acmicpc.net/problem/1422) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1422.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1422.swift))
 - [2075 N번째 큰 수](https://www.acmicpc.net/problem/2075) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_2075.py))
+- [1715 카드 정렬하기](https://www.acmicpc.net/problem/1715) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1715.swift))
+
 ### **두 포인터**
 - [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.swift))
 - [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.swift))
@@ -133,3 +135,4 @@
 - [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EC%88%98%EC%8B%9D%EC%B5%9C%EB%8C%80%ED%99%94.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EC%88%98%EC%8B%9D%EC%B5%9C%EB%8C%80%ED%99%94.swift))
 - [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EA%B4%84%ED%98%B8%EB%B3%80%ED%99%98.swift))
 - [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063?language=python3) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%B8%94%EB%A1%9D%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%B8%94%EB%A1%9D%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.swift))
+- [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EC%8B%A4%ED%8C%A8%EC%9C%A8.swift))
