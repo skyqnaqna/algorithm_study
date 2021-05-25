@@ -108,6 +108,8 @@
 - [9372 상근이의 여행](https://www.acmicpc.net/problem/9372) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_9372.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_9372.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_9372.swift))
 - [17472 다리 만들기 2](https://www.acmicpc.net/problem/17472) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_17472.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_17472.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/GraphTheory/BOJ_17472.swift))
 
+### **트라이**
+- [5052 전화번호 목록](https://www.acmicpc.net/problem/5052) ([Swfit](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Trie/BOJ_5052.swift))
 
 ---
 ## **프로그래머스**
