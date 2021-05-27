@@ -61,13 +61,19 @@
 
 ### **브루트포스**
 - [1018 체스판 다시 칠하기](https://www.acmicpc.net/problem/1018) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.py))
+- [14501 퇴사](https://www.acmicpc.net/problem/14501) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_14501.swift))
+
 ### **그리디**
 - [1439 뒤집기](https://www.acmicpc.net/problem/1439) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Greedy/BOJ_1439.py))
+
 ### **수학**
+
 ### **조합론**
 - [1010 다리 놓기](https://www.acmicpc.net/problem/1010) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.py))
+
 ### **기하학**
 - [1064 평행사변형](https://www.acmicpc.net/problem/1064) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Geometry/BOJ_1064.py))
+
 ### **다이나믹 프로그래밍**
 - [2670 연속부분최대곱](https://www.acmicpc.net/problem/2670) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2670.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2670.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2670.swift))
 - [1463 1로 만들기](https://www.acmicpc.net/problem/1463) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1463.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1463.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1463.swift))
@@ -80,6 +86,9 @@
 - [11053 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11053.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11053.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11053.swift))
 - [14002 가장 긴 증가하는 부분 수열 4](https://www.acmicpc.net/problem/14002) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14002.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14002.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14002.swift))
 - [14003 가장 긴 증가하는 부분 수열 5](https://www.acmicpc.net/problem/14003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14003.swift))
+- [14501 퇴사](https://www.acmicpc.net/problem/14501) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_14501.swift))
+- [18353 병사 배치하기](https://www.acmicpc.net/problem/18353) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_18353.swift))
+
 ### **다익스트라**
 - [18352 특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.swift)))
 
