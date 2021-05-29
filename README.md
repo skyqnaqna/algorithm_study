@@ -69,7 +69,7 @@
 ### **수학**
 
 ### **조합론**
-- [1010 다리 놓기](https://www.acmicpc.net/problem/1010) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.py) / ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.swift)))
+- [1010 다리 놓기](https://www.acmicpc.net/problem/1010) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Combinatorics/BOJ_1010.swift))
 
 ### **기하학**
 - [1064 평행사변형](https://www.acmicpc.net/problem/1064) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Geometry/BOJ_1064.py))
