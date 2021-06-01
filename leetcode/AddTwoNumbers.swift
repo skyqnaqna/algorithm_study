@@ -13,79 +13,35 @@ public class ListNode {
 
 class Solution {
   func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-    var answer: ListNode
     var pos1 = l1
     var pos2 = l2
-    var num1 = pos1!.val
-    var num2 = pos2!.val
-    var flag = false
-
-    answer = ListNode((num1 + num2) % 10)
+    var answer = ListNode()
     var now = answer
+    var carry = 0
 
-    if num1 + num2 > 9 {
-      flag = true
-    }
+    while pos1 != nil || pos2 != nil {
+      let num1 = pos1 != nil ? pos1!.val : 0
+      let num2 = pos2 != nil ? pos2!.val : 0
 
-    pos1 = pos1!.next
-    pos2 = pos2!.next
+      let sum = num1 + num2 + carry
 
-     while pos1 != nil && pos2 != nil {
+      now.next = ListNode(sum % 10)
+      carry = sum / 10
+      now = now.next!
 
-      num1 = pos1!.val
-      num2 = pos2!.val
-
-      if flag {
-        now.next = ListNode((num1 + num2 + 1) % 10)
-        if num1 + num2 + 1 < 10 {
-          flag = false
-        }
-      } else {
-        now.next = ListNode((num1 + num2) % 10)
-        if num1 + num2 > 9 {
-          flag = true
-        }
+      if pos1 != nil {
+        pos1 = pos1!.next
       }
 
-      now = now.next!
-      pos1 = pos1!.next
-      pos2 = pos2!.next
-    }
-
-    if pos1 == nil {
-      while pos2 != nil {
-        if flag {
-          now.next = ListNode((pos2!.val + 1) % 10)
-          if pos2!.val + 1 < 10 {
-            flag = false
-          }
-        } else {
-          now.next = pos2
-        }
-        now = now.next!
+      if pos2 != nil {
         pos2 = pos2!.next
       }
     }
 
-    if pos2 == nil {
-      while pos1 != nil {
-        if flag {
-          now.next = ListNode((pos1!.val + 1) % 10)
-          if pos1!.val + 1 < 10 {
-            flag = false
-          }
-        } else {
-          now.next = pos1
-        }
-        now = now.next!
-        pos1 = pos1!.next
-      }
+    if carry > 0 {
+      now.next = ListNode(carry)
     }
 
-    if flag {
-      now.next = ListNode(1)
-    }
-
-    return answer
+    return answer.next
   }
 }
