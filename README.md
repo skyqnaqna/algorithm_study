@@ -94,7 +94,7 @@
 
 ### **다익스트라**
 - [18352 특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.swift)))
-- [1753 최단경로](https://www.acmicpc.net/problem/1753) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1753.swift))
+- [1753 최단경로](https://www.acmicpc.net/problem/1753) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1753.cpp) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1753.swift))
 
 
 ### **플로이드**
@@ -157,6 +157,6 @@
 ### **Easy**
 
 ### **Medium**
-[2 Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/leetcode/AddTwoNumbers.swift))
+- [2 Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/leetcode/AddTwoNumbers.swift))
 
 ### **Hard**
