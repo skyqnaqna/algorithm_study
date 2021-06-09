@@ -1,4 +1,4 @@
-# **알고리즘 공부 && 코드 저장**
+# **알고리즘 문제 공부**
 ## **백준**
 ### **Stack**
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
@@ -92,6 +92,7 @@
 - [11726 2xn 타일링](https://www.acmicpc.net/problem/11726) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11726.swift))
 - [11727 2xn 타일링 2](https://www.acmicpc.net/problem/11727) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11727.swift))
 - [2579 계단 오르기](https://www.acmicpc.net/problem/2579) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2579.swift))
+- [1912 연속합](https://www.acmicpc.net/problem/1912) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1912.swift))
 
 ### **다익스트라**
 - [18352 특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.swift)))
@@ -105,6 +106,7 @@
 - [2224 명제 증명](https://www.acmicpc.net/problem/2224) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_2224.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_2224.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_2224.swift))
 - [1058 친구](https://www.acmicpc.net/problem/1058) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_1058.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_1058.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_1058.swift))
 - [14588 Line Friends (Small)](https://www.acmicpc.net/problem/14588) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_14588.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_14588.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_14588.swift))
+- [14938 서강그라운드](https://www.acmicpc.net/problem/14938) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/FloydWarshall/BOJ_14938.swift))
 
 ### **최소 스패닝 트리**
 - [4386 별자리 만들기](https://www.acmicpc.net/problem/4386) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/MinimumSpanningTree/BOJ_4386.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/MinimumSpanningTree/BOJ_4386.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/MinimumSpanningTree/BOJ_4386.swift))
