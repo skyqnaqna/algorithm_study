@@ -1,5 +1,8 @@
 # **알고리즘 문제 공부**
 ## **백준**
+### **문자열**
+- [3029 경고](https://www.acmicpc.net/problem/3029) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_3029.swift))
+
 ### **Stack**
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
 - [17298 오큰수](https://www.acmicpc.net/problem/17298) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.swift))
@@ -93,6 +96,7 @@
 - [11727 2xn 타일링 2](https://www.acmicpc.net/problem/11727) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_11727.swift))
 - [2579 계단 오르기](https://www.acmicpc.net/problem/2579) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2579.swift))
 - [1912 연속합](https://www.acmicpc.net/problem/1912) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1912.swift))
+- [9465 스티커](https://www.acmicpc.net/problem/9465) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_9465.swift))
 
 ### **다익스트라**
 - [18352 특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.swift)))

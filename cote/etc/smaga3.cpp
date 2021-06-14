@@ -25,7 +25,7 @@ typedef std::pair<ll, ll> pll;
 using namespace std;
 
 int n, m;
-vector <vector <int> > graph (101, vector<int>(101, 0));
+vector <vector <int> > graph (102, vector<int>(102, 0));
 int dx[4] = {0, 1, 0, -1};
 int dy[4] = {-1, 0, 1, 0};
 
@@ -37,7 +37,7 @@ int bfs (pii start)
     int startCol = start.second;
     int breakCount = 0;
 
-    bool visited[101][101] = { false };
+    bool visited[102][102] = { false };
     queue <pii> blockList; // 차단로 위치 저장해두기
 
     queue <pii> q;
@@ -81,9 +81,11 @@ int bfs (pii start)
 
             breakCount++;
             graph[nextRow][nextCol] = 0;
+//            printf("break: %d %d\n", nextRow, nextCol);
         }
     }
 
+//    printf("%d\n", breakCount);
     return breakCount;
 }
 
@@ -94,13 +96,13 @@ int main()
 
     for (int i = 1; i <= n; ++i)
     {
-        char str[101]; scanf("%s", &str);
+        char str[101]; scanf("%s", str);
 
         for (int j = 1; j <= m; ++j)
         {
-            if (str[j] == '#') { graph[i][j] = -1; }
-            else if (str[j] == '@') { graph[i][j] = 1; }
-            else if (str[j] == 'R')
+            if (str[j-1] == '#') { graph[i][j] = -1; }
+            else if (str[j-1] == '@') { graph[i][j] = 1; }
+            else if (str[j-1] == 'R')
             {
                 researcher.push_back({i, j});
             }
