@@ -31,61 +31,55 @@ int dy[4] = {-1, 0, 1, 0};
 
 vector <pii> researcher; // 연구원 위치
 
-int bfs (pii start)
+int bfs ()
 {
-    int startRow = start.first;
-    int startCol = start.second;
+
     int breakCount = 0;
 
-    bool visited[102][102] = { false };
-    queue <pii> blockList; // 차단로 위치 저장해두기
+    bool visited[2][102][102] = { false };
 
-    queue <pii> q;
-    q.push({startRow, startCol});
-    visited[startRow][startCol] = true;
+    queue <tuple<int, int, int, int> > q; // row, col, breakCount, researcher
+
+    q.push({researcher[0].first, researcher[0].second, 0, 0});
+    visited[0][researcher[0].first][researcher[0].second] = true;
+
+    q.push({researcher[1].first, researcher[1].second, 0, 1});
+    visited[1][researcher[1].first][researcher[1].second] = true;
 
     while (!q.empty())
     {
-        int nowRow = q.front().first;
-        int nowCol = q.front().second;
+        int nowRow, nowCol, nowCost, person;
+        tie(nowRow, nowCol, nowCost, person) = q.front();
         q.pop();
 
-        if (nowRow < 1 || nowCol < 1 || nowRow > n || nowCol > m) { break; } // 연구소 탈출
+        if (nowRow < 1 || nowCol < 1 || nowRow > n || nowCol > m)
+        {
+            breakCount += nowCost;
+            continue;
+        } // 연구소 탈출
 
         for (int i = 0; i < 4; ++i)
         {
             int row = nowRow + dy[i];
             int col = nowCol + dx[i];
 
-            if (row < 0 || col < 0 || row > n + 1 || col > m + 1 || graph[row][col] == -1 || visited[row][col]) { continue; }
+            if (row < 0 || col < 0 || row > n + 1 || col > m + 1 || graph[row][col] == -1 || visited[person][row][col]) { continue; }
             else if (graph[row][col] == 0)
             {
-                q.push({row, col});
-                visited[row][col] = true;
+                q.push({row, col, nowCost, person});
+                visited[person][row][col] = true;
             }
-            else if (graph[row][col] == 1) // 차단로는 일단 차단로 목록에 저장
+            else if (graph[row][col] == 1)
             {
-                blockList.push({row, col});
+                q.push({row, col, nowCost + 1, person});
+                visited[person][row][col] = true;
+                graph[row][col] = 0;
+
+                printf("break: (%d, %d), cost: %d\n", row, col, nowCost + 1);
             }
-        }
-
-        // 더 이상 갈 곳이 없으면 벽 하나 부수고 진행
-        if (q.empty())
-        {
-            int nextRow = blockList.front().first;
-            int nextCol = blockList.front().second;
-            blockList.pop();
-
-            q.push({nextRow, nextCol});
-            visited[nextRow][nextCol] = true;
-
-            breakCount++;
-            graph[nextRow][nextCol] = 0;
-//            printf("break: %d %d\n", nextRow, nextCol);
         }
     }
 
-//    printf("%d\n", breakCount);
     return breakCount;
 }
 
@@ -109,7 +103,7 @@ int main()
         }
     }
 
-    int result = bfs(researcher[0]) + bfs(researcher[1]);
+    int result = bfs();
     printf("%d\n", result);
 
     return 0;
