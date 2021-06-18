@@ -97,11 +97,13 @@
 - [2579 계단 오르기](https://www.acmicpc.net/problem/2579) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_2579.swift))
 - [1912 연속합](https://www.acmicpc.net/problem/1912) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1912.swift))
 - [9465 스티커](https://www.acmicpc.net/problem/9465) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_9465.swift))
+- [1890 점프](https://www.acmicpc.net/problem/1890) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DynamicProgramming/BOJ_1890.swift))
 
 ### **다익스트라**
 - [18352 특정 거리의 도시 찾기](https://www.acmicpc.net/problem/18352) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_18352.swift)))
 - [1753 최단경로](https://www.acmicpc.net/problem/1753) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1753.cpp) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1753.swift))
 - [13549 숨바꼭질 3](https://www.acmicpc.net/problem/13549) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_13549.swift))
+- [1277 발전소 설치](https://www.acmicpc.net/problem/1277) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Dijkstra/BOJ_1277.swift))
 
 
 ### **플로이드**
