@@ -8,6 +8,11 @@
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
 - [17298 오큰수](https://www.acmicpc.net/problem/17298) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.swift))
 
+### **백트래킹**
+- [15649 N과 M (1)](https://www.acmicpc.net/problem/15649) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_15649.swift))
+- [9663 N-Queen](https://www.acmicpc.net/problem/9663) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_1182.swift))
+- [1182 부분수열의 합](https://www.acmicpc.net/problem/1182) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_1182.swift))
+
 ### **DFS/BFS**
 - [10026 적록색약](https://www.acmicpc.net/problem/10026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_10026.cpp))
 - [1012 유기농 배추](https://www.acmicpc.net/problem/1012) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_1012.py))
