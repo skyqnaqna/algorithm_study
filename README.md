@@ -4,6 +4,9 @@
 - [3029 경고](https://www.acmicpc.net/problem/3029) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_3029.swift))
 - [1316 그룹 단어 체커](https://www.acmicpc.net/problem/1316) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.swift))
 
+### **Linked List**
+- [1406 에디터](https://www.acmicpc.net/problem/1406) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DataStructure/BOJ_1406.cpp))
+
 ### **Stack**
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
 - [17298 오큰수](https://www.acmicpc.net/problem/17298) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.swift))
@@ -12,6 +15,7 @@
 - [15649 N과 M (1)](https://www.acmicpc.net/problem/15649) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_15649.swift))
 - [9663 N-Queen](https://www.acmicpc.net/problem/9663) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_1182.swift))
 - [1182 부분수열의 합](https://www.acmicpc.net/problem/1182) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_1182.swift))
+- [10971 외판원 순회 2](https://www.acmicpc.net/problem/10971) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_10971.swift))
 
 ### **DFS/BFS**
 - [10026 적록색약](https://www.acmicpc.net/problem/10026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_10026.cpp))
