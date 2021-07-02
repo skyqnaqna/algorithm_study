@@ -5,7 +5,7 @@
 - [1316 그룹 단어 체커](https://www.acmicpc.net/problem/1316) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/String/BOJ_1316.swift))
 
 ### **Linked List**
-- [1406 에디터](https://www.acmicpc.net/problem/1406) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/DataStructure/BOJ_1406.cpp))
+- [1406 에디터](https://www.acmicpc.net/problem/1406) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/LinkedList/BOJ_1406.cpp))
 
 ### **Stack**
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
