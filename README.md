@@ -10,6 +10,8 @@
 ### **Stack**
 - [2493 탑](https://www.acmicpc.net/problem/2493) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_2493.swift))
 - [17298 오큰수](https://www.acmicpc.net/problem/17298) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_17298.swift))
+- [4949 균형잡힌 세상](https://www.acmicpc.net/problem/4949) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Stack/BOJ_4949.cpp))
+
 
 ### **백트래킹**
 - [15649 N과 M (1)](https://www.acmicpc.net/problem/15649) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Backtracking/BOJ_15649.swift))
@@ -177,6 +179,8 @@
 - [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EA%B4%84%ED%98%B8%EB%B3%80%ED%99%98.swift))
 - [블록 이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063?language=python3) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%B8%94%EB%A1%9D%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EB%B8%94%EB%A1%9D%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0.swift))
 - [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EC%8B%A4%ED%8C%A8%EC%9C%A8.swift))
+- [신규 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%EC%8B%A0%EA%B7%9C%EC%95%84%EC%9D%B4%EB%94%94%EC%B6%94%EC%B2%9C.swift))
+- [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/programmers/kakao/%ED%8A%9C%ED%94%8C.swift))
 
 ---
 ## **LeetCode**
