@@ -1,58 +1,59 @@
-// 백준 2110 공유기 설치
-// 21.02.17
-#include <iostream>
-#include <algorithm>
-#include <queue>
-#include <vector>
-#include <string>
-#include <cmath>
-#include <set>
-#define INF 2147000000
+/*
+ 백준 2110 공유기 설치
+ 21.07.31
+ https://github.com/skyqnaqna/algorithm_study
+ */
 
-typedef long long ll;
+#include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
+using dd = double;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+
+#define INF 1e9
+#define endl "\n"
+
+int n, c;
+vector <int> house;
 
 int main()
 {
-    int n, c; scanf("%d %d", &n, &c);
-    vector <int> house;
-    for (int i = 0; i < n; ++i)
-    {
-        int x; scanf("%d", &x);
+    ios::sync_with_stdio(0); cin.tie(0);
+    freopen("input.txt", "r", stdin);
+
+    cin >> n >> c;
+
+    for (int i = 0; i < n; ++i) {
+        int x; cin >> x;
         house.push_back(x);
     }
+
     sort(house.begin(), house.end());
 
-    // 집 사이의 거리를 기준으로 탐색
-    int l = 0, r = house[n - 1]  - house[0];
-    int m = (l + r) / 2;
-    int ans = 0;
+    int mid, l = 0, r = house[n-1], ans = 0;
 
-    while (l <= r)
-    {
-        int cnt = 1;
-        int pre = house[0];
-        for (auto &next : house)
-        {
-            if (next - pre >= m)
-            {
+    while (l <= r) {
+        mid = (l + r) / 2;
+
+        int cnt = 1, pre = house[0];
+        for (auto &now : house) {
+            if (now - pre >= mid) {
                 ++cnt;
-                pre = next;
+                pre = now;
             }
         }
 
-        if (cnt >= c)
-        {
-            ans = max(ans, m);
-            l = m + 1;
+        if (cnt >= c) {
+            ans = max(ans, mid);
+            l = mid + 1;
+        } else {
+            r = mid - 1;
         }
-        else r = m - 1;
-
-        m = (l + r) / 2;
     }
 
-    printf("%d\n", ans);
+    cout << ans << endl;
 
     return 0;
 }
