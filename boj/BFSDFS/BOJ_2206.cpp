@@ -1,92 +1,79 @@
-/*----------------------
-|백준 2206 벽 부수고 이동하기
-|21.01.30
-----------------------*/
+/*
+ 백준 2206 벽 부수고 이동하기
+ 21.08.19
+ https://github.com/skyqnaqna/algorithm_study
+ */
 
-#include <iostream>
-#include <algorithm>
-#include <queue>
-#include <vector>
-#include <string>
-#include <cmath>
-#define INF 2147000000
+#include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
+using dd = double;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
 
-int n, m;
-int graph[1001][1001];
-int dist1[1001][1001] = { 0 };
-int dist2[1001][1001] = { 0 };
-int dx[4] = {0, 0, -1, 1};
-int dy[4] = {-1, 1, 0, 0};
+#define INF (int)2e9
+#define endl "\n"
 
-int BFS(int r, int c)
-{
-    queue <pair <int, pair <int, int> > > q;
-    q.push({0, {r, c}});
-    dist1[r][c] = 1; // 벽을 안부수고 간 경우
-    dist2[r][c] = 1;
+int n, m, dist[2][1000][1000];
+char graph[1000][1000];
+int dy[] = {-1, 1, 0, 0};
+int dx[] = {0, 0, -1, 1};
 
-    while (!q.empty())
-    {
-        int r = q.front().second.first;
-        int c = q.front().second.second;
-        int skill = q.front().first; // 벽을 부순 횟수
+bool in(int r, int c) { return 0 <= r && r < n && 0 <= c && c < m; }
+
+int bfs() {
+    dist[0][0][0] = 1;
+    queue<pair <pii, int> >q;
+    q.push({{0, 0}, 0});
+
+    while (!q.empty()) {
+        int r = q.front().first.first;
+        int c = q.front().first.second;
+        int breakWall = q.front().second;
         q.pop();
 
-        if (r == n - 1 && c == m - 1)
-        {
-            if (dist1[r][c] && dist2[r][c]) return min(dist1[r][c], dist2[r][c]);
-            else if (dist1[r][c]) return dist1[r][c];
-            else return dist2[r][c];
-        }
-
-        for (int i = 0; i < 4; ++i)
-        {
+        for (int i = 0; i < 4; ++i) {
             int nr = r + dy[i];
             int nc = c + dx[i];
 
-            if (nr < 0 || nr >= n || nc < 0 || nc >= m) continue;
-
-            if (skill == 0)
-            {
-                if (graph[nr][nc] == 0 && dist1[nr][nc] == 0)
-                {
-                    q.push({skill, {nr, nc}});
-                    dist1[nr][nc] = dist1[r][c] + 1;
-                }
-                else if (graph[nr][nc] == 1 && dist1[nr][nc] == 0)
-                {
-                    q.push({skill + 1, {nr, nc}});
-                    dist2[nr][nc] = dist1[r][c] + 1;
-                }
-            }
-            else
-            {
-                if (graph[nr][nc] == 0 && dist2[nr][nc] == 0)
-                {
-                    q.push({skill, {nr, nc}});
-                    dist2[nr][nc] = dist2[r][c] + 1;
+            if (in(nr, nc)) {
+                if (graph[nr][nc] == '1' && breakWall == 0 && dist[1][nr][nc] == 0) {
+                    dist[1][nr][nc] = dist[0][r][c] + 1;
+                    q.push({{nr, nc}, 1});
+                } else if (graph[nr][nc] == '0' && dist[breakWall][nr][nc] == 0){
+                    dist[breakWall][nr][nc] = dist[breakWall][r][c] + 1;
+                    q.push({{nr, nc}, breakWall});
                 }
             }
         }
     }
 
-    return -1;
+    if (dist[0][n-1][m-1] == 0 && dist[1][n-1][m-1] == 0) {
+        return -1;
+    } else if (dist[0][n-1][m-1] == 0) {
+        return dist[1][n-1][m-1];
+    } else if (dist[1][n-1][m-1] == 0) {
+        return dist[0][n-1][m-1];
+    } else {
+        return min(dist[0][n-1][m-1], dist[1][n-1][m-1]);
+    }
 }
 
-int main()
-{
-    scanf("%d %d", &n, &m);
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < m; ++j)
-        {
-            scanf("%1d", &graph[i][j]);
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    freopen("input.txt", "r", stdin);
+
+    cin >> n >> m;
+
+    for (int i = 0; i < n; ++i) {
+        string s; cin >> s;
+        for (int j = 0; j < m; ++j) {
+            graph[i][j] = s[j];
         }
     }
 
-    printf("%d\n", BFS(0,0));
+    cout << bfs() << endl;
 
     return 0;
 }
