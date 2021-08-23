@@ -36,6 +36,7 @@
 - [14888 연산자 끼워넣기](https://www.acmicpc.net/problem/14888) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_14888.swift))
 - [16234 인구 이동](https://www.acmicpc.net/problem/16234) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_16234.swift))
 - [18428 감시피하기](https://www.acmicpc.net/problem/18428) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_18428.swift))
+- [16954 움직이는 미로 탈출](https://www.acmicpc.net/problem/16954) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BFSDFS/BOJ_16954.swift))
 
 ### **이분 탐색**
 - [1072 게임](https://www.acmicpc.net/problem/1072) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1072.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1072.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1072.swift))
@@ -47,6 +48,7 @@
 - [2110 공유기 설치](https://www.acmicpc.net/problem/2110) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2110.swift))
 - [1939 중량제한](https://www.acmicpc.net/problem/1939) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_1939.swift))
 - [17951 흩날리는 시험지 속에서 내 평점이 느껴진거야](https://www.acmicpc.net/problem/17951) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_17951.swift))
+- [2417 정수 제곱근](https://www.acmicpc.net/problem/2417) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2417.cpp) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/BinarySearch/BOJ_2417.swift))
 
 ### **정렬**
 - [1026 보물](https://www.acmicpc.net/problem/1026) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1026.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Sort/BOJ_1026.py))
@@ -63,6 +65,7 @@
 ### **두 포인터**
 - [2003 수들의 합2](https://www.acmicpc.net/problem/2003) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_2003.swift))
 - [14921 용액 합성하기](https://www.acmicpc.net/problem/14921) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.py) / [Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_14921.swift))
+- [15831 준표의 조약돌](https://www.acmicpc.net/problem/15831) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/TwoPointer/BOJ_15831.swift))
 
 ### **슬라이딩 윈도우**
 - [11003 최솟값 찾기](https://www.acmicpc.net/problem/11003) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/SlidingWindow/BOJ_11003.py))
@@ -73,6 +76,7 @@
 - [2002 추월](https://www.acmicpc.net/problem/2002) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_2002.swift))
 - [2590 색종이](https://www.acmicpc.net/problem/2590) ([Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_2590.py))
 - [3190 뱀](https://www.acmicpc.net/problem/3190) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_3190.swift))
+- [16926 배열 돌리기 1](https://www.acmicpc.net/problem/16926) ([Swift](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Implementation/BOJ_16926.swift))
 
 ### **브루트포스**
 - [1018 체스판 다시 칠하기](https://www.acmicpc.net/problem/1018) ([C++](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.cpp) / [Python](https://github.com/skyqnaqna/algorithm_study/blob/main/boj/Bruteforcing/BOJ_1018.py))
