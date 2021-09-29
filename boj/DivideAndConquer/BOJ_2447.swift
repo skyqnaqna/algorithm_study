@@ -37,6 +37,9 @@ func recursive(_ r: Int, _ c: Int, _ size: Int) {
 
 recursive(0, 0, n)
 
+var answer = ""
 for i in 0 ..< n {
-  print(star[i].joined())
+  answer += star[i].joined() + "\n"
 }
+
+print(answer)
