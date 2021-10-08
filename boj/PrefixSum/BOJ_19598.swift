@@ -8,42 +8,34 @@ import Foundation
 
 let n = Int(readLine()!)!
 
-var timeSet = Set<Int>()
-var query = [(Int, Int)]()
+var arr = [(Int, Int)]()
 
 for _ in 0 ..< n {
   let input = readLine()!.split(separator: " ").map { Int(String($0))! }
-  query.append((input[0], input[1]))
   
-  timeSet.insert(input[0])
-  timeSet.insert(input[1])
+  arr.append((input[0], 1))
+  arr.append((input[1], -1))
 }
 
-let timeArr = timeSet.map { $0 }.sorted(by: <)
-var timeIdx = [Int: Int]()
+arr.sort(by: < )
+//print(arr)
 
-for (i, t) in timeArr.enumerated() {
-  timeIdx[t] = i
-}
+//arr.sort(by: {
+//  if $0.0 == $1.0 {
+//    return $0.1 < $1.1
+//  } else {
+//    return $0.0 < $1.0
+//  }
+//})
+//print(arr)
 
-var prefixSum = [Int](repeating: 0, count: timeArr.count + 1)
+var sum = 0, ans = 0
 
-for (s, e) in query {
-  let l = timeIdx[s]!
-  let r = timeIdx[e]!
-  
-  prefixSum[l] += 1
-  prefixSum[r] -= 1
-}
-
-var ans = 0
-
-for i in 1 ..< prefixSum.count {
-  prefixSum[i] += prefixSum[i - 1]
-  if ans < prefixSum[i] {
-    ans = prefixSum[i]
+for (_, x) in arr {
+  sum += x
+  if ans < sum {
+    ans = sum
   }
 }
 
 print(ans)
-
