@@ -1,92 +1,60 @@
 /*
  백준 17836 공주님을 구해라!
- 21.07.22
+ 21.11.15
  https://github.com/skyqnaqna/algorithm_study
  */
 
 import Foundation
 
-struct Queue<T> {
-  private var left = [T]()
-  private var right = [T]()
-
-  public var isEmpty: Bool {
-    return left.isEmpty && right.isEmpty
-  }
-
-  public var count: Int {
-    return left.count + right.count
-  }
-
-  public mutating func push(_ element: T) {
-    right.append(element)
-  }
-
-  public mutating func pop() -> T? {
-    guard !isEmpty else { return nil }
-
-    if left.isEmpty {
-      left = right.reversed()
-      right.removeAll()
-    }
-
-    return left.removeLast()
-  }
-
-  public func front() -> T? {
-    return left.isEmpty ? right.first : left.last
-  }
-}
-
-let INF = Int(1e9)
+let INF = Int(2e9)
 let direction = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
-let input = readLine()!.split(separator: " ").map{ Int(String($0))! }
+let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 let n = input[0], m = input[1], t = input[2]
-var gr = 0, gc = 0
 
-var graph = [[Int]](repeating: [Int](), count: n)
-var dist = [[Int]](repeating: [Int](repeating: INF, count: m), count: n)
-var visited = [[Bool]](repeating: [Bool](repeating: false, count: m), count: n)
+var gram = (-1, -1)
+
+var graph = [[Int]](repeating: [Int](), count: n),
+    dist = [[Int]](repeating: [Int](repeating: INF, count: m), count: n)
 
 for i in 0 ..< n {
-  graph[i] = readLine()!.split(separator: " ").map{ Int(String($0))! }
-
+  graph[i] = readLine()!.split(separator: " ").map { Int(String($0))! }
+  
   for j in 0 ..< m {
     if graph[i][j] == 2 {
-      gr = i
-      gc = j
+      gram = (i, j)
     }
   }
 }
 
-var q = Queue<(Int, Int, Int)>()
+func inBound(_ r: Int, _ c: Int) -> Bool {
+  return 0 <= r && r < n && 0 <= c && c < m && graph[r][c] != 1
+}
+
 dist[0][0] = 0
-visited[0][0] = true
-q.push((0, 0, 0))
+var q = [(Int, Int, Int)](), front = 0
+q.append((0, 0, 0))
 
-while !q.isEmpty {
-  let (d, r, c) = q.pop()!
-
+while front < q.count {
+  let (r, c, w) = q[front]
+  front += 1
+  
   for (dy, dx) in direction {
     let nr = r + dy
     let nc = c + dx
-
-    if nr < 0 || nc < 0 || nr >= n || nc >= m { continue }
-
-    if (!visited[nr][nc] && graph[nr][nc] != 1) {
-      visited[nr][nc] = true
-      dist[nr][nc] = d + 1
-      q.push((d + 1, nr, nc))
+    
+    if !inBound(nr, nc) { continue }
+    
+    if dist[nr][nc] == INF {
+      dist[nr][nc] = w + 1
+      q.append((nr, nc, w + 1))
     }
   }
 }
 
-let fromGramTo = n - gr + m - gc - 2 + dist[gr][gc]
-let ans = min(dist[n-1][m-1], fromGramTo)
+let answer = min(dist[n-1][m-1], dist[gram.0][gram.1] + n - 1 - gram.0 + m - 1 - gram.1)
 
-if ans <= t && ans != INF {
-  print(ans)
-} else {
+if answer > t || answer == INF {
   print("Fail")
+} else {
+  print(answer)
 }
