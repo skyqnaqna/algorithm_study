@@ -101,16 +101,17 @@ for i in 0 ..< n {
 var pos = [Int](repeating: 0, count: n)
 var answer = Int(2e9)
 
-var maxHeap = PriorityQueue<(Int, Int)>(sort: {$0.0 > $1.0})
 var minHeap = PriorityQueue<(Int, Int)>(sort: {$0.0 < $1.0})
+var maxVal = 0
 
 for i in 0 ..< n {
-  maxHeap.push((arr[i][pos[i]], i))
   minHeap.push((arr[i][pos[i]], i))
+  if maxVal < arr[i][pos[i]] {
+    maxVal = arr[i][pos[i]]
+  }
 }
 
 while true {
-  let (maxVal, _) = maxHeap.peek()!
   let (minVal, idx) = minHeap.pop()!
   
   if maxVal - minVal < answer {
@@ -122,7 +123,9 @@ while true {
   if pos[idx] == m { break }
   
   minHeap.push((arr[idx][pos[idx]], idx))
-  maxHeap.push((arr[idx][pos[idx]], idx))
+  if maxVal < arr[idx][pos[idx]] {
+    maxVal = arr[idx][pos[idx]]
+  }
 }
 
 print(answer)
