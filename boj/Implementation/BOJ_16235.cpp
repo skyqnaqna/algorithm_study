@@ -1,6 +1,6 @@
 /*
  백준 16235 나무 재테크
- 22.01.06
+ 22.01.08
  https://github.com/skyqnaqna/algorithm_study
  */
 
@@ -36,7 +36,7 @@ void output() {
 int n, m, k;
 vector <vector <int> > graph(10, vector<int>(10, 5));
 vector <vector <int> > A;
-deque <pair <int, pii> > trees;
+vector <vector < map <int, int> > > trees(10, vector <map <int, int> >(10));
 
 int dy[] = {-1, 1, 0, 0, -1, -1, 1, 1};
 int dx[] = {0, 0, -1, 1, -1, 1, -1, 1};
@@ -49,7 +49,7 @@ int main() {
   ios::sync_with_stdio(0); cin.tie(0);
   
   cin >> n >> m >> k;
-  
+
   for (int i = 0; i < n; ++i) {
     vector <int> v;
     int a;
@@ -59,65 +59,83 @@ int main() {
     }
     A.push_back(v);
   }
-  
+
   for (int i = 0; i < m; ++i) {
     int x, y, z;
     cin >> x >> y >> z;
-    trees.push_back({z, {--x, --y}});
+    trees[x - 1][y - 1].insert({z, 1});
   }
-  
-  sort(trees.begin(), trees.end());
-  
+
   while (k-->0) {
     vector <pair <int ,pii> > deadTrees;
-    vector <pii> breedingTrees;
-    
-    int size = trees.size();
-    
+    vector <pair <int, pii> > breedingTrees;
+
     // 봄
-    for (int i = 0; i < size; ++i) {
-      int age = trees.front().first;
-      int r = trees.front().second.first;
-      int c = trees.front().second.second;
-      trees.pop_front();
-      
-      if (graph[r][c] < age) {
-        deadTrees.push_back({age / 2, {r, c}});
-        continue;
-      }
-      
-      graph[r][c] -= age++;
-      trees.push_back({age, {r, c}});
-      
-      if (age % 5 == 0) {
-        breedingTrees.push_back({r, c});
+    for (int i = 0; i < n; ++i) {
+      for (int j = 0; j < n; ++j) {
+        if (!trees[i][j].empty()) {
+          map<int, int> agingTrees;
+          
+          for (auto &tree : trees[i][j]) {
+            int age = tree.first;
+            int cnt = tree.second;
+            
+            if (age * cnt <= graph[i][j]) {
+              graph[i][j] -= age * cnt;
+              agingTrees.insert({age + 1, cnt});
+              
+              if ((age + 1) % 5 == 0) breedingTrees.push_back({cnt, {i, j}});
+              
+            } else if (age <= graph[i][j]) {
+              int agingCnt = graph[i][j] / age;
+              
+              graph[i][j] -= age * agingCnt;
+              
+              agingTrees.insert({age + 1, agingCnt});
+              
+              if ((age + 1) % 5 == 0) breedingTrees.push_back({agingCnt, {i, j}});
+              
+              deadTrees.push_back({(age / 2) * (cnt - agingCnt), {i, j}});
+            } else {
+              deadTrees.push_back({(age / 2) * cnt, {i, j}});
+            }
+          }
+          trees[i][j] = agingTrees;
+        }
       }
     }
-    
+
     // 여름
     for (auto &tree : deadTrees) {
       int nutrient = tree.first;
       int r = tree.second.first;
       int c = tree.second.second;
-      
+
       graph[r][c] += nutrient;
     }
-    
+
     // 가을
     for (auto &tree : breedingTrees) {
-      int r = tree.first;
-      int c = tree.second;
-      
+      int cnt = tree.first;
+      int r = tree.second.first;
+      int c = tree.second.second;
+
       for (int i = 0; i < 8; ++i) {
         int nr = r + dy[i];
         int nc = c + dx[i];
-        
+
         if (!inBound(nr, nc)) continue;
         
-        trees.push_front({1, {nr, nc}});
+        if (trees[nr][nc].find(1) != trees[nr][nc].end()) {
+//          trees[nr][nc].find(1)->second += cnt;
+          trees[nr][nc][1] += cnt;
+        } else {
+//          trees[nr][nc].insert({1, cnt});
+          trees[nr][nc][1] = cnt;
+        }
       }
     }
-    
+
     // 겨울
     for (int i = 0; i < n; ++i) {
       for (int j = 0; j < n; ++j) {
@@ -125,8 +143,20 @@ int main() {
       }
     }
   }
-  
-  cout << trees.size() << endl;
 
+  int answer = 0;
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+      if (!trees[i][j].empty()) {
+        for (auto &tree : trees[i][j]) {
+          answer += tree.second;
+        }
+      }
+    }
+  }
+  
+  cout << answer << endl;
+  
   return 0;
 }
+
