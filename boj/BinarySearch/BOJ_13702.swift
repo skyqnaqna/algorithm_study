@@ -1,5 +1,5 @@
 //  백준 13702 이상한 술집
-//  21.02.17
+//  22.02.17
 
 import Foundation
 
@@ -14,9 +14,10 @@ for _ in 0..<n {
 var l: Int = 0
 var r: Int = mak.max()!
 var m: Int = (l + r) / 2
-var ans: Int = 0
+var ans: Int = n == k ? mak.min()! : 0
 
 while l <= r {
+  if m == 0 { break }
   var cnt: Int = 0
   for i in mak {
     cnt += i / m
@@ -33,3 +34,4 @@ while l <= r {
 }
 
 print(ans)
+
