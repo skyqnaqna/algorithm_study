@@ -65,32 +65,39 @@ if m == 1 {
     heapPush(arr.removeLast())
   }
   
-  for _ in m ..< n {
-    let next = heapPop() + arr.removeLast()
-    heapPush(next)
-  }
-  
-//  while size > 0 {
-//    let min = heapPop()
-//    answer += min
-//
-//    for _ in 0 ..< size {
-//      var now = heapPop()
-//
-//      now -= min
-//
-//      if now > 0 {
-//        heapPush(now)
-//      }
-//    }
-//
-//    while !arr.isEmpty && size < m {
-//      heapPush(arr.removeLast())
-//    }
+  // 1. 작은거에서 다음거 더해가면서 구하기
+//  for _ in m ..< n {
+//    let next = heapPop() + arr.removeLast()
+//    heapPush(next)
 //  }
   
+//  while size > 0 {
+//    answer = heapPop()
+//  }
+  
+  // 2. 작은값을 빼면서 구하기
   while size > 0 {
-    answer = heapPop()
+    let min = heapPop()
+    answer += min
+    var temp = [UInt64]()
+
+    for _ in 0 ..< size {
+      var now = heapPop()
+
+      now -= min
+
+      if now > 0 {
+        temp.append(now)
+      }
+    }
+    
+    while !temp.isEmpty {
+      heapPush(temp.removeLast())
+    }
+
+    while !arr.isEmpty && size < m {
+      heapPush(arr.removeLast())
+    }
   }
   
   print(answer)
