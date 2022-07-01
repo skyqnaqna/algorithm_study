@@ -11,22 +11,33 @@ let n = Int(readLine()!)!
 let l = readLine()!.split(separator: " ").map { Int(String($0))! }
 let j = readLine()!.split(separator: " ").map { Int(String($0))! }
 
-// MARK: - 풀이 2) DP (0-1 Knapsack)
+// MARK: - 풀이 3) DP (0-1 knapsack) 1차원 배열
 
-var dp = [[Int]](repeating: [Int](repeating: 0, count: 101), count: n + 1)
+var dp = [Int](repeating: 0, count: 101)
 
-for i in 1 ... n {
-  for hp in 1 ..< 100 {
-    if hp < l[i - 1] {
-      dp[i][hp] = dp[i - 1][hp]
-      continue
-    }
-    
-    dp[i][hp] = max(dp[i - 1][hp], dp[i - 1][hp - l[i - 1]] + j[i - 1])
+for i in 0 ..< n {
+  for k in stride(from: 100, to: l[i], by: -1) {
+    dp[k] = max(dp[k], dp[k - l[i]] + j[i])
   }
 }
 
-print(dp[n].max()!)
+print(dp[100])
+// MARK: - 풀이 2) DP (0-1 Knapsack) 2차원 배열
+
+//var dp = [[Int]](repeating: [Int](repeating: 0, count: 101), count: n + 1)
+//
+//for i in 1 ... n {
+//  for hp in 1 ..< 100 {
+//    if hp < l[i - 1] {
+//      dp[i][hp] = dp[i - 1][hp]
+//      continue
+//    }
+//
+//    dp[i][hp] = max(dp[i - 1][hp], dp[i - 1][hp - l[i - 1]] + j[i - 1])
+//  }
+//}
+//
+//print(dp[n].max()!)
 
 // MARK: - 풀이 1) 브루트포스
 
